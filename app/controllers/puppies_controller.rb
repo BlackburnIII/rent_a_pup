@@ -4,7 +4,8 @@ class PuppiesController < ApplicationController
   end
 
   def show
-
+    @puppy = Puppy.find(params[:id])
+    authorize @puppy
   end
 
   def new
