@@ -1,11 +1,10 @@
 // Specific CSS for your home-page
 .banner {
-  background: url("Background Home Page.jpg");
-  width: 100%;
+  background-image: url("Background Home Page.jpg");
   height: 100vh;
-   position: fixed;
-   background-size: cover;
   background-repeat:  no-repeat;
+  background-size: cover;
+
   }
 
   .about-logo {
@@ -22,10 +21,10 @@
   }
 
   .text-signup {
-    display: bloc;
-position: center;
- padding-top: 200px;
-    padding-right: 380px;
+   display: bloc;
+   position: center;
+   padding-top: 200px;
+  padding-right: 380px;
   }
 
   h3 {
