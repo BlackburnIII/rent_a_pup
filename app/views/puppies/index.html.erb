@@ -1,0 +1,11 @@
+<%= link_to "user profile", edit_user_registration_path %>
+
+<ul>
+<% @puppies.each do |puppy| %>
+  <li>
+    <%= link_to(puppy) do %>
+      <%= puppy.name %>
+    <% end %>
+  </li>
+<% end %>
+</ul>
