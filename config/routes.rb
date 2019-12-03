@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  resources :users, only: [:new, :create, :show, :edit, :update, :delete] do
-    resources :bookings, only: [:index, :show, :edit, :update, :delete]
-    resources :reviews
-  end
+  resources :bookings, only: [:index, :show, :edit, :update, :delete]
+  resources :reviews
+
   resources :puppies do
     resources :bookings, only: [:new, :create]
     resources :reviews
