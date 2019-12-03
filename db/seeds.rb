@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create(email: "shadymtadros@hotmail.com", :password => 'topsecret', :password_confirmation => 'topsecret', first_name: "shady", last_name: "tadros")
+Puppy.create(name: "luke skywalker", breed: "golden retriever", birthdate: Date.new(2001, 2, 3), user_id: 1)
+Booking.create(start_date: Date.new(2001, 2, 3), end_date: Date.new(2001, 2, 5), user_id: 1, puppy_id: 1)
+Review.create(title: "bla bla", rating: 5, booking_id: 1)

@@ -1,0 +1,11 @@
+<%= link_to "user profile", user_path %>
+<!-- NOT SURE IF USER PATH WORKS YET -->
+<ul>
+<%= @puppies.each do |puppy| %>
+  <li>
+    <%= link_to(puppy) do %>
+      <%= puppy.name %>
+    <%= end %>
+  </li>
+<%= end %>
+</ul>
