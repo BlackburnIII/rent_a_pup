@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  resources :bookings, only: [:index, :show, :edit, :update, :delete]
-  resources :reviews
-
-  resources :puppies do
-    resources :bookings, only: [:new, :create]
-    resources :reviews
-  end
+  resources :puppies
 
 
   devise_for :users

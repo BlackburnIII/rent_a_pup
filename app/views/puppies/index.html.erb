@@ -1,11 +1,11 @@
-<%= link_to "user profile",  %>
-<!-- NOT SURE WHAT TO PUT AS PATH -->
+<%= link_to "user profile", edit_user_registration_path %>
+
 <ul>
-<%= @puppies.each do |puppy| %>
+<% @puppies.each do |puppy| %>
   <li>
     <%= link_to(puppy) do %>
       <%= puppy.name %>
-    <%= end %>
+    <% end %>
   </li>
-<%= end %>
+<% end %>
 </ul>
