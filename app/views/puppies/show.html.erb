@@ -1,2 +1,6 @@
-<%= @puppy.name %>
+<h1><%= @puppy.name %></h1>
+<!-- NEED TO ADD IMAGE HERE -->
+<%= link_to new_puppy_booking_path(@puppy) do %>
+  <p>Book the puppy</p>
+<% end %>
 <%= link_to 'Back', :back %>

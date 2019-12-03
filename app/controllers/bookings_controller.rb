@@ -18,10 +18,17 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    authorize @booking
+    # @date = Date.today.to_s
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new(booking_params, user_id: current_user.i)
+    if @booking.save
+      retirect_to profile_path
+    else
+      render :new
+    end
     # STILL TO WRITE IF STATEMENT BASED ON
     # START_DATE END_DATE AVAILABILITY
   end
