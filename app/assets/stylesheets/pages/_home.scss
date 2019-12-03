@@ -1,1 +1,50 @@
 // Specific CSS for your home-page
+.home-banner {
+  background: url("Background Home Page.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat:  no-repeat;
+  }
+
+  .text-signup {
+   margin-top: 280px;
+   margin-left: 120px;
+   text-align: center;
+  }
+
+  h3 {
+  font-family: 'Parisienne', cursive;
+  font-size: 39px;
+  color: white;
+  margin: 0;
+
+  }
+
+  h1 {
+  font-size: 36px;
+  color: white;
+  font-weight: medium;
+  }
+
+.btn-warning {
+margin-top: 20px;
+width: 100px;
+color: white;
+padding: 8px 16px;
+}
+
+.about-logo {
+display: inline;
+
+}
+
+.about-logo img {
+width: 30px;
+color: white;
+}
+
+.about-logo a {
+  color: white;
+  margin-left: 20px;
+}
