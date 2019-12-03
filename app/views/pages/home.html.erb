@@ -1,28 +1,22 @@
-
-<div class="home-banner">
-<div class="container">
   <div class="about-logo">
     <%= image_tag "logo.svg" %>
     <%= link_to "about us" %>
-
   </div>
-  <div class="row ">
-    <div class="col-12">
+
+<div class="banner">
+
+
+
       <div class="text-signup">
       <h3><%= "Need sweetness?"%></h3>
       <h1><%= "RENT A PUPPY" %> </h1>
-
     <% if user_signed_in? %>
-
-      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-warning')  %>
+    <%= link_to('SIGN UP', new_user_registration_path, class: 'btn btn-warning') %>
     <% else %>
-
-      <%= link_to('SIGN UP', new_user_registration_path, class: 'btn btn-warning') %>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-warning')  %>
     <% end %>
   </div>
+
     </div>
-    </div>
-  </div>
-</div>
 
 
