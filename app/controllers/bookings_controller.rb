@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def edit
@@ -25,7 +26,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params, user_id: current_user.i)
     if @booking.save
-      retirect_to profile_path
+      retirect_to puppy_booking_path
     else
       render :new
     end
@@ -33,9 +34,11 @@ class BookingsController < ApplicationController
     # START_DATE END_DATE AVAILABILITY
   end
 
-  def delete
+  def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
+    authorize @booking
+    redirect_to puppies_path
   end
 
   private

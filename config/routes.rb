@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :puppies do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, :show]
   end
+  resources :bookings, only: :destroy
 
   devise_for :users
   root to: 'pages#home'
