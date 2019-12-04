@@ -4,7 +4,8 @@ class PuppyPolicy < ApplicationPolicy
       scope.all
     end
   end
-  def index?
+
+  def show?
     return true
   end
 end

@@ -1,0 +1,13 @@
+<h1><%= current_user.first_name %></h1>
+<h3>Your puppies</h3>
+<ul>
+<% @puppies.each do |puppy| %>
+  <%= link_to(edit_puppy_path(puppy)) do %>
+    <li><%= puppy.name %></li>
+  <% end %>
+<% end %>
+</ul>
+<%= link_to(new_puppy_path) do %>
+  <p>create new puppy</p>
+<% end %>
+<%= link_to 'Back', :back %>
