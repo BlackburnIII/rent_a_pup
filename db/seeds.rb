@@ -12,4 +12,4 @@ Puppy.create(name: "other dog", breed: "golden retriever", birthdate: Date.new(2
 Booking.create(start_date: Date.new(2001, 2, 3), end_date: Date.new(2001, 2, 5), user_id: 1, puppy_id: 2)
 Booking.create(start_date: Date.new(2001, 2, 3), end_date: Date.new(2001, 2, 5), user_id: 2, puppy_id: 1)
 Review.create(title: "bla bla", rating: 5, booking_id: 1, reviewee: "user")
-Review.create(title: "bla bla", rating: 5, booking_id: 2, reviewee: "booking")
+Review.create(title: "bla bla", rating: 5, booking_id: 2, reviewee: "puppy")
