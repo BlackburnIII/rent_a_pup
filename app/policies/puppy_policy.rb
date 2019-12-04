@@ -8,4 +8,15 @@ class PuppyPolicy < ApplicationPolicy
   def show?
     return true
   end
+
+  def create?
+    return true
+  end
+
+
+  def new?
+  create?
+  end
+
+
 end

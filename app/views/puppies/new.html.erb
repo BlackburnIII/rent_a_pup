@@ -1,2 +1,9 @@
 <h1>Puppies#new</h1>
 <p>Find me in app/views/puppies/new.html.erb</p>
+
+<%= simple_form_for @puppy do |f| %>
+  <%= f.input :name %>
+  <%= f.input :birthdate %>
+  <%= f.input :breed %>
+  <%= f.button :submit %>
+<% end %>
