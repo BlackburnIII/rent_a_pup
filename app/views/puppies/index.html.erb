@@ -1,11 +1,18 @@
-<%= link_to "user profile", '/profile' %>
+<%= render '/components/navbar' %>
 
-<ul>
 <% @puppies.each do |puppy| %>
-  <li>
-    <%= link_to(puppy) do %>
-      <%= puppy.name %>
-    <% end %>
-  </li>
+<div class="card-puppy">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="puppy-text">
+     <h2>Name: <%= puppy.name %></h2>
+      <h2>Age:<%= puppy.birthdate %></h2>
+      <h2>Breed:<%= puppy.breed %></h2>
+        <%= link_to(puppy) do %>
+      <div class="card-puppy-infos">
+            <%= link_to "See", '/profile', class: 'btn btn-warning' %>
+            <% end %>
+    </div>
+
+        </div>
+      </div>
 <% end %>
-</ul>

@@ -1,0 +1,42 @@
+.card-puppy{
+  overflow: hidden;
+  height: 220px;
+  width: 800px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-puppy img {
+  height: 100%;
+  width: 220px;
+  object-fit: cover;
+}
+
+.card-puppy h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0px;
+}
+
+.card-puppy p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.puppy-text {
+  padding-left: 20px;
+  margin-top: 40px;
+}
+.card-puppy .card-puppy-infos {
+  padding: 16px 0px;
+}
+
+a.btn-warning {
+  margin: 0;
+}
