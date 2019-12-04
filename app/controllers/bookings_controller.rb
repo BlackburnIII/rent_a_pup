@@ -17,13 +17,13 @@ class BookingsController < ApplicationController
   end
 
   def create
-
     @puppy = Puppy.find(params[:puppy_id])
     @booking = Booking.new(booking_params)
     authorize @booking
     @booking.user_id = current_user.id
 
-    @booking = Booking.new(booking_params, user: current_user)
+    @booking = Booking.new(booking_params)
+    @booking.user_id = current_user.id
 
     if @booking.save
       retirect_to puppy_booking_path(@puppy)
