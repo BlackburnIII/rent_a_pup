@@ -24,7 +24,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params, user_id: current_user.i)
+    @booking = Booking.new(booking_params, user: current_user)
     if @booking.save
       retirect_to puppy_booking_path
     else

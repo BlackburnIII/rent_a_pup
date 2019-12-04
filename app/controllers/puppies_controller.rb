@@ -6,6 +6,9 @@ class PuppiesController < ApplicationController
   def show
     @puppy = Puppy.find(params[:id])
     authorize @puppy
+    @bookings = Booking.where(puppy: @puppy)
+    @reviews = Review.find()
+
   end
 
   def new
