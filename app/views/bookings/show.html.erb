@@ -9,6 +9,9 @@
   <%= f.submit "add a review", class: "btn btn-primary" %>
 <% end %>
 
-<%= link_to "Cancel booking", @booking,
+<p> <%= link_to "Cancel booking", @booking,
       method: :delete,
-      data: { confirm: "Are you sure?" } %>
+      data: { confirm: "Are you sure?" } %></p>
+
+<p> <%= link_to 'Back', :back %></p>
+<p> <%= link_to "user profile", '/profile' %></p>
