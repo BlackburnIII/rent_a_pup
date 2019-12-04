@@ -3,5 +3,17 @@
 <%= link_to new_puppy_booking_path(@puppy) do %>
   <p>Book the puppy</p>
 <% end %>
-<p><%= @puppy.bookings.first.reviews.first.title %></p>
+
+<div class="reviews-box">
+  <h3><%= "Reviews of #{@puppy.name}" %></h3>
+  <% @reviews.each do |review| %>
+    <div class="review-card">
+      <h4><%= review.name %></h4>
+      <h4>Rating: <%= review[:rating] %></h4>
+      <p><%= review.description %></p>
+    </div>
+  <% end  %>
+</div>
+
+
 <%= link_to 'Back', :back %>
