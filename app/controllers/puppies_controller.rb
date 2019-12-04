@@ -6,6 +6,18 @@ class PuppiesController < ApplicationController
   def show
     @puppy = Puppy.find(params[:id])
     authorize @puppy
+    @bookings = Booking.where(puppy: @puppy)
+
+    # LOOP THROUGH @BOOKINGS TO GET APPROPRIATE REVIEWS
+    @reviews = []
+    @bookings.each do |booking|
+      @reviews << Review.where(
+        # WHERE THE BOOKING OF THE REVIEW IS THIS BOOKING
+        booking: booking,
+        # && WHERE THE REVIEWEE FIELD == BOOKING
+        reviewee: "puppy"
+      )
+    end
   end
 
   def new
