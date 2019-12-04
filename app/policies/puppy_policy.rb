@@ -18,5 +18,9 @@ class PuppyPolicy < ApplicationPolicy
   create?
   end
 
+  def edit?
+    return true
+  end
+
 
 end
