@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :puppies, dependent: :destroy
   has_many :bookings, dependent: :destroy
   has_many :reviews, through: :bookings
+
 end
