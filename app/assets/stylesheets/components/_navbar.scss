@@ -1,5 +1,6 @@
 .navbar {
   position: fixed;
+  z-index:1;
   top: 0;
   width: 100%;
   justify-content: space-between;
@@ -20,7 +21,7 @@
 
 .navbar .fa-paw{
   color: white;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 

@@ -1,18 +1,24 @@
-<%= render '/components/navbar' %>
 
+  <%= render '/components/navbar' %>
+  <%= render '/components/search-navbar' %>
+
+<div class="box">
 <% @puppies.each do |puppy| %>
-<div class="card-puppy">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="puppy-text">
-     <h2>Name: <%= puppy.name %></h2>
-      <h2>Age:<%= puppy.birthdate %></h2>
-      <h2>Breed:<%= puppy.breed %></h2>
+  <div class="card-puppy">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="puppy-text">
+        <h3>Name</h3>
+        <h2><%= puppy.name %></h2>
+        <h3>Age</h3>
+        <h2><%= puppy.birthdate %></h2>
+        <h3>Breed</h3>
+        <h2><%= puppy.breed %></h2>
         <%= link_to(puppy) do %>
-      <div class="card-puppy-infos">
-            <%= link_to "See", puppy, class: 'btn btn-warning' %>
-            <% end %>
-    </div>
-
-        </div>
+        <div class="card-puppy-infos">
+        <%= link_to "More", puppy, class: 'btn btn-warning' %>
+        <% end %>
       </div>
+    </div>
+  </div>
 <% end %>
+</div>
