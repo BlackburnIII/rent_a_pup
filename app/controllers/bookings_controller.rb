@@ -21,12 +21,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     authorize @booking
     @booking.user_id = current_user.id
-
-    @booking = Booking.new(booking_params)
-    @booking.user_id = current_user.id
-
+    @booking.puppy = @puppy
     if @booking.save
-      retirect_to puppy_booking_path(@puppy)
+      redirect_to puppy_booking_path(@puppy, @booking)
     else
       render :new
     end
