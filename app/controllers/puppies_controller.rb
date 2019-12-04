@@ -7,8 +7,13 @@ class PuppiesController < ApplicationController
     @puppy = Puppy.find(params[:id])
     authorize @puppy
     @bookings = Booking.where(puppy: @puppy)
-    @reviews = Review.find()
 
+
+    # LOOP THROUGH @BOOKINGS TO GET APPROPRIATE REVIEWS
+    @reviews = []
+    @bookings.each do |booking|
+      @reviews << Review.where()
+    end
   end
 
   def new
