@@ -6,12 +6,15 @@
 
 <div class="reviews-box">
   <h3><%= "Reviews of #{@puppy.name}" %></h3>
+  <%= raise %>
   <% @reviews.each do |review| %>
-    <div class="review-card">
-      <h4><%= review[0].title %></h4>
-      <h4>Rating: <%= review[0].rating %>/5</h4>
-      <p><%= review[0].description %></p>
-    </div>
+    <% if review.size > 0 %>
+      <div class="review-card">
+        <h4><%= review[0].title %></h4>
+        <h4>Rating: <%= review[0].rating %>/5</h4>
+        <p><%= review[0].description %></p>
+      </div>
+    <% end %>
   <% end  %>
 </div>
 
