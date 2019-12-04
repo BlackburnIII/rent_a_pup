@@ -29,6 +29,7 @@ class PuppiesController < ApplicationController
 
   def edit
     @puppy = Puppy.find(params[:id])
+    authorize @puppy
   end
 
   def update
