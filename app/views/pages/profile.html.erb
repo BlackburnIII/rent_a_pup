@@ -2,7 +2,7 @@
 <h3>Your puppies</h3>
 <ul>
 <% @puppies.each do |puppy| %>
-  <%= link_to(edit_puppy_path(puppy)) do %>
+  <%= link_to(puppy_path(puppy)) do %>
     <li><%= puppy.name %></li>
   <% end %>
 <% end %>

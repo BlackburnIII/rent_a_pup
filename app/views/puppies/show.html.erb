@@ -3,4 +3,5 @@
 <%= link_to new_puppy_booking_path(@puppy) do %>
   <p>Book the puppy</p>
 <% end %>
+<p><%= @puppy.bookings.first.reviews.first.title %></p>
 <%= link_to 'Back', :back %>

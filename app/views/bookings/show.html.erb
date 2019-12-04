@@ -1,6 +1,14 @@
 <h1>booking of <%= @booking.puppy.name %></h1>
 <p>start date: <%= @booking.start_date %></p>
 <p>end date: <%= @booking.end_date %></p>
+
+<%= simple_form_for([@booking.puppy, @booking, @review], method: "post") do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :rating %>
+  <%= f.submit "add a review", class: "btn btn-primary" %>
+<% end %>
+
 <%= link_to "Cancel booking", @booking,
       method: :delete,
       data: { confirm: "Are you sure?" } %>

@@ -6,27 +6,23 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     authorize @booking
-  end
-
-  def edit
-    @booking = Booking.find(params[:id])
-  end
-
-  def update
-    @booking = Booking.find(params[:id])
-    @booking.update(booking_params)
+    @review = Review.new
   end
 
   def new
+    @puppy = Puppy.find(params[:puppy_id])
     @booking = Booking.new
     authorize @booking
     # @date = Date.today.to_s
   end
 
   def create
-    @booking = Booking.new(booking_params, user_id: current_user.i)
+    @puppy = Puppy.find(params[:puppy_id])
+    @booking = Booking.new(booking_params)
+    authorize @booking
+    @booking.user_id = current_user.id
     if @booking.save
-      retirect_to puppy_booking_path
+      retirect_to puppy_booking_path(@puppy)
     else
       render :new
     end
@@ -44,6 +40,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:bookings).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
