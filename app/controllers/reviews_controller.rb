@@ -3,9 +3,9 @@ class ReviewsController < ApplicationController
     @puppy = Puppy.find(params[:puppy_id])
     @booking = Booking.find(params[:booking_id])
     if current_user.id == @booking.user_id
-      @reviewee == "user"
+      @reviewee = "user"
     else
-      @reviewee == "puppy"
+      @reviewee = "puppy"
     end
     @review = Review.new(review_params)
     @review.booking_id = @booking.id
