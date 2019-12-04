@@ -1,17 +1,6 @@
-<form action="/puppies" method="post">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <label for="name">Name: </label>
-  <input type="text" name="puppy[name]" id="name"
-         value=" ">
-
-  <label for="location">Address/Location: </label>
-  <input type="text" name="puppy[location]" id="location">
-
-  <label for="age">Age: </label>
-  <input type="integer" name="puppy[age]" id="age"
-         value=" ">
-
-  <input type="submit">
-
-  <%= render 'form', puppy: @puppy %>
-</form>
+<%= simple_form_for @puppy do |f| %>
+  <%= f.input :name %>
+  <%= f.input :birthdate %>
+  <%= f.input :breed %>
+  <%= f.button :submit %>
+<% end %>
