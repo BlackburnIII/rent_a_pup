@@ -1,12 +1,33 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   justify-content: space-between;
-  background: #C4C4C4;
+  background: $orange;
 }
+
+.navbar-light .navbar-nav .active a.nav-link  {
+  color: white;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 18px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 18px;
+}
+
+.navbar .fa-paw{
+  color: white;
+  font-size: 35px;
+}
+
 
 .navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar .navbar-brand img {
-  width: 40px;
+.avatar {
+  height: 40px;
 }

@@ -1,4 +1,5 @@
 
+
   <div class="about-logo">
     <%= image_tag "logo.svg" %>
     <%= link_to "about us" %>
@@ -8,6 +9,17 @@
 
 
 
+<<<<<<< HEAD
+      <div class="text-signup">
+      <h3><%= "Need sweetness?"%></h3>
+      <h1><%= "RENT A PUPPY" %> </h1>
+    <% if user_signed_in? %>
+    <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-warning')  %>
+
+    <% else %>
+    <%= link_to('SIGN UP', new_user_registration_path, class: 'btn btn-warning') %>
+    <% end %>
+=======
   <div class="text-signup">
     <h3><%= "Need sweetness?"%></h3>
     <h1><%= "RENT A PUPPY" %> </h1>
@@ -16,5 +28,6 @@
       <% else %>
         <%= link_to('SIGN UP', new_user_registration_path, class: 'btn btn-warning') %>
       <% end %>
+>>>>>>> f7e568447968c22ee0ecd50bc5a0c4adb6107096
   </div>
 </div>
