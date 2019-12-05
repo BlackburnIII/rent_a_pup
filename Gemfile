@@ -20,6 +20,7 @@ gem 'devise'
 gem 'webpacker'
 gem 'pundit'
 gem 'faker'
+gem 'cloudinary', '~>1.9.1'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
