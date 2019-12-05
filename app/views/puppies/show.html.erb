@@ -1,5 +1,8 @@
+
 <%= render '/components/navbar' %>
 <%= render '/components/search-navbar' %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <h1><%= @puppy.name %></h1>
 <!-- NEED TO ADD IMAGE HERE -->
@@ -15,8 +18,9 @@
   <% @reviews.each do |review| %>
     <% if review.size > 0 %>
       <div class="review-card">
+        <%#= image_tag review.first.booking.puppy.photo.url %>
         <h4><%= review[0].title %></h4>
-        <h4>Rating: <%= review[0].rating %>/5</h4>
+        <h5>Rating: <%= review[0].rating %> of 5 </h5>
         <p><%= review[0].description %></p>
       </div>
     <% end %>

@@ -1,0 +1,25 @@
+.review-card {
+  padding: 20px;
+  overflow: hidden;
+  height: 220px;
+  width: 400px;
+  margin-bottom: 0;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: center;
+  vertical-align: top;
+}
+
+.review-card h5 {
+  font-family: "Open Sans", "sans-serif";
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 0;
+  vertical-align: bottom;
+}
+
+.checked {
+  color: orange;
+}
