@@ -5,7 +5,7 @@
 <div class="box">
 <% @puppies.each do |puppy| %>
   <div class="card-puppy">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <%= cl_image_tag puppy.photo, height: 220, width: 220, crop: :thumb %>
       <div class="puppy-text">
         <h3>Name</h3>
         <h2><%= puppy.name %></h2>
