@@ -1,0 +1,20 @@
+<h1><%= @user.first_name %>, <%= @user.last_name %></h1>
+<h3>All owned dogs:</h3>
+<% @user.puppies.each do |puppy| %>
+  <% if @user.puppies.nil? == false %>
+    <p><%= puppy.name %></p>
+  <% end %>
+<% end %>
+<div class="reviews-box">
+  <h3><%= "Reviews of #{@user.first_name}" %></h3>
+  <% @reviews.each do |review| %>
+    <% if review.size > 0 %>
+      <div class="review-card">
+        <h4><%= review[0].title %></h4>
+        <h4>Rating: <%= review[0].rating %>/5</h4>
+        <p><%= review[0].description %></p>
+      </div>
+    <% end %>
+  <% end  %>
+</div>
+<%= link_to 'Back', :back %>
