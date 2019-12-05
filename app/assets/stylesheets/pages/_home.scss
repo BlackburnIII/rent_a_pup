@@ -1,62 +1,51 @@
 // Specific CSS for your home-page
-body {
-  background-image: url("only background.jpg");
-  height: 100vh;
-  background-repeat:  no-repeat;
-  background-size: cover;
-  }
 
 .banner {
-  background-image: url("Background Home Page.jpg");
+background-image: url("Background Home Page.jpg");
+background-repeat:  no-repeat;
+ background-size: cover;
+ background-position: center;
+ height: 100vh;
+
+ }
+
+ .about-logo i {
+  font-size: 60px;
+  color: white;
+ }
+
+.container-text {
   height: 100vh;
-  background-repeat:  no-repeat;
-  background-size: cover;
-  }
-
-  .about-logo {
-  display: inline;
-  }
-
-  .about-logo img {
-  width: 30px;
-  color: white;
-  }
-
-  .about-logo a {
-    color: white;
-  }
-
-  .text-signup {
-   display: bloc;
-   position: center;
-   padding-top: 200px;
-  padding-right: 380px;
-  }
-
-  .text-signup h3 {
-  font-family: 'Parisienne', cursive;
-  font-size: 39px;
-  color: white;
-  align-self: center;
-  margin: 0;
-
-
-  }
-
-  .text-signup h1 {
-  font-size: 36px;
-  color: white;
-  font-weight: medium;
-  align-self: center;
-
-  }
-
-.btn-warning {
-width: 100px;
-color: white;
-padding: 8px 16px;
-align-self: center;
-margin-top: 20px;
+  width: 900px;
+  text-align: center;
+  padding-top: 300px;
+  padding-left: 200px;
 }
 
+ .banner h1 {
+   margin: 0;
+   color: white;
+   font-size: 64px;
+   line-height: 0.6;
+ }
 
+ .banner h3 {
+   font-size: 70px;
+   font-family: "parisienne";
+   color: white;
+   margin-bottom: 0px;
+ }
+
+.btn-warning {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+a.btn.btn-warning {
+  padding: 12px 18px;
+  color: white;
+  margin-top: 40px;
+
+
+}
