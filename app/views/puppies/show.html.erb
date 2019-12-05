@@ -8,8 +8,8 @@
   <h3><%= "Reviews of #{@puppy.name}" %></h3>
   <% @reviews.each do |review| %>
     <% if review.size > 0 %>
-    raise
       <div class="review-card">
+        <%#= image_tag review.first.booking.puppy.photo.url %>
         <h4><%= review[0].title %></h4>
         <h4>Rating: <%= review[0].rating %>/5</h4>
         <p><%= review[0].description %></p>
