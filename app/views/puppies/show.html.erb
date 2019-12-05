@@ -3,29 +3,33 @@
 <%= render '/components/search-navbar' %>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-<h1><%= @puppy.name %></h1>
-<!-- NEED TO ADD IMAGE HERE -->
-<%= cl_image_tag @puppy.photo, width: 220, height: 220, crop: :thumb %>
-<%= link_to new_puppy_booking_path(@puppy) do %>
-  <p>Book the puppy</p>
-<% end %>
-<%= link_to owner_path(@puppy) do %>
-  <p>view owner profile</p>
-<% end %>
-<div class="reviews-box">
-  <h3><%= "Reviews of #{@puppy.name}" %></h3>
-  <% @reviews.each do |review| %>
-    <% if review.size > 0 %>
-      <div class="review-card">
-        <%#= image_tag review.first.booking.puppy.photo.url %>
-        <h4><%= review[0].title %></h4>
-        <h5>Rating: <%= review[0].rating %> of 5 </h5>
-        <p><%= review[0].description %></p>
-      </div>
+<div class="show-body-box">
+  <div class="show-puppy-info">
+    <h1><%= @puppy.name %></h1>
+    <%= cl_image_tag @puppy.photo, width: 220, height: 220, crop: :thumb %>
+    <div class="puppy-links">
+      <%= link_to "Book #{@puppy.name}", new_puppy_booking_path(@puppy), class: "btn btn-warning small" %>
+      <%= link_to "View Owner Profile", owner_path(@puppy), class: "btn btn-warning small" %>
+    </div>
+  </div>
+  <div class="reviews-box">
+    <% if @reviews.size > 0 %>
+      <h3><%= "Reviews of #{@puppy.name}" %></h3>
+      <% @reviews.each do |review| %>
+        <% if review.size > 0 %>
+          <div class="review-card">
+            <%#= image_tag review.first.booking.puppy.photo.url %>
+            <div class="review-title">
+              <h4><%= review[0].title %></h4>
+              <h5>Rating: <%= review[0].rating %> of 5 </h5>
+            </div>
+            <div class="review-body">
+              <p><%= review[0].description %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end  %>
     <% end %>
-  <% end  %>
+  </div>
+  <%= link_to 'Back', :back , class: "btn btn-primary small"%>
 </div>
-
-
-<%= link_to 'Back', :back %>

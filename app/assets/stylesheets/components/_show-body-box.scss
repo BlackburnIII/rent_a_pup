@@ -1,0 +1,11 @@
+@import "../config/layout-vars";
+
+.show-body-box {
+  margin: 25px auto;
+  border: 2px;
+  // box-shadow: 2px 2px 1px;
+  width: $width;
+  height: $height;
+  border-radius: 5px;
+  text-align: center;
+}
