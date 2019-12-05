@@ -1,5 +1,6 @@
 <h1><%= @puppy.name %></h1>
 <!-- NEED TO ADD IMAGE HERE -->
+<%= cl_image_tag @puppy.photo, width: 220, height: 220, crop: :thumb %>
 <%= link_to new_puppy_booking_path(@puppy) do %>
   <p>Book the puppy</p>
 <% end %>
