@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   get '/profile', to: 'pages#profile'
-
+  get '/puppies/:puppy_id/owner', to: 'pages#owner', as: 'owner'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
