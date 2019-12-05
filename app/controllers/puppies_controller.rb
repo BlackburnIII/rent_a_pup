@@ -7,6 +7,7 @@ class PuppiesController < ApplicationController
         @markers << {
           lat: puppy.user.latitude,
           lng: puppy.user.longitude,
+          infoWindow: render_to_string(partial: "info_window", locals: { puppy: puppy }),
           image_url: helpers.asset_url('49650516-map-pin-pointer-dog-icon.jpg')
         }
       end

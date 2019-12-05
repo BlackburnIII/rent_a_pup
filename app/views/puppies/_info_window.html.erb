@@ -1,0 +1,21 @@
+<div class="card-puppy">
+    <%= cl_image_tag puppy.photo %>
+    <div class="infos">
+
+      <div class="puppy-text">
+        <h3>Name</h3>
+        <h2><%= puppy.name %></h2>
+        <h3>Age</h3>
+        <h2><%= puppy.birthdate %></h2>
+        <h3>Breed</h3>
+        <h2><%= puppy.breed %></h2>
+        <%= link_to(puppy) do %>
+      </div>
+
+      <div class="card-puppy-infos">
+      <%= link_to "More", puppy, class: 'btn btn-warning' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
