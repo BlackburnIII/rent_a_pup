@@ -1,6 +1,15 @@
 class PuppiesController < ApplicationController
   def index
     @puppies = policy_scope(Puppy.all)
+    @markers = []
+    @puppies.map do |puppy|
+      if !puppy.user.location.nil?
+        @markers << {
+          lat: puppy.user.latitude,
+          lng: puppy.user.longitude
+        }
+      end
+    end
   end
 
   def show
@@ -21,7 +30,6 @@ class PuppiesController < ApplicationController
   end
 
   def new
-
     @puppy = Puppy.new
     authorize @puppy
     @user = current_user
