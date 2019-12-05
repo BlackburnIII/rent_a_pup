@@ -1,3 +1,7 @@
+<%= render '/components/navbar' %>
+<%= render '/components/search-navbar' %>
+
+
 <h1><%= @user.first_name %>, <%= @user.last_name %></h1>
 <h3>All owned dogs:</h3>
 <% @user.puppies.each do |puppy| %>
