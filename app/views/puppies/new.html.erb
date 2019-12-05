@@ -9,6 +9,8 @@
   <%= f.input :name %>
   <%= f.input :birthdate %>
   <%= f.input :breed %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache as: :hidden %>
   <%= link_to "Create", puppies_path, class: 'btn btn-warning' %>
 </div>
 <% end %>
