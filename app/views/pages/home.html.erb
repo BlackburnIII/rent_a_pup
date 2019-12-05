@@ -1,18 +1,18 @@
 <div class="banner">
-
   <div class="container-text">
     <div class="about-logo">
       <i class="fas fa-paw"></i>
     </div>
     <h3><%= "Need sweetness?"%></h3>
-         <h1><%= "RENT A PUPPY" %> </h1>
-           <% if user_signed_in? %>
-             <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-warning')  %>
-             <%= link_to('View Puppies', '/puppies', method: :get, class: 'btn btn-primary') %>
-           <% else %>
-             <%= link_to('SIGN UP', new_user_registration_path, class: 'btn btn-warning') %>
-           <% end %>
+    <h1><%= "RENT A PUPPY" %> </h1>
+    <% if user_signed_in? %>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-warning')  %>
+      <%= link_to('View Puppies', '/puppies', method: :get, class: 'btn btn-primary') %>
+    <% else %>
+      <%= link_to('SIGN UP', new_user_registration_path, class: 'btn btn-warning') %>
+    <% end %>
   </div>
+  <div></div>
 </div>
 
 
