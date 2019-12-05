@@ -1,10 +1,18 @@
-#map-container {
-    position: relative;
-    height: 180px;
-    width: 600px;
+.background {
+  display: flex;
+}
+
+.box {
+flex-grow:1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+  padding: 16px;
 }
 
 #map {
-    position: relative;
-
+  height: 100vh;
+  width: 57%;
+  position: sticky;
+  top: 18.8%;
 }
