@@ -1,0 +1,62 @@
+.box {
+  margin-top: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  height: 100%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.review-card {
+  overflow: hidden;
+  height: 220px;
+  width: 700px;
+  margin-bottom: 40px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.review-card img {
+  height: 100%;
+  width: 220px;
+  object-fit: cover;
+}
+
+.review-card h2 {
+  margin: 0;
+  padding: 5px 0px;
+}
+
+.review-card h3 {
+  font-family: "Open Sans", "sans-serif";
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.review-text {
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+.review-card h2{
+  margin: 0px;
+  font-size: 14px;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: thiny;
+}
+
+.review-card .review-card-infos {
+  padding: 8px 0px;
+}
+
+a.btn-warning {
+  margin: 0;
+  padding: 5px 5px;
+  margin-bottom: 40px;
+}
