@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create(email: "shadymtadros@hotmail.com", :password => 'topsecret', :password_confirmation => 'topsecret', first_name: "shady", last_name: "tadros")
+User.create(email: "shadymtadros@hotmail.com", :password => 'topsecret', :password_confirmation => 'topsecret', first_name: "shady", last_name: "tadros", location: "16 Villa Gaudelet, Paris")
 Puppy.create(name: "luke skywalker", breed: "golden retriever", birthdate: Date.new(2001, 2, 3), user_id: 1)
 User.create(email: "blabla@gmail.com", :password => 'topsecret', :password_confirmation => 'topsecret', first_name: "meh", last_name: "bla")
 Puppy.create(name: "other dog", breed: "golden retriever", birthdate: Date.new(2001, 2, 3), user_id: 2)
@@ -21,7 +21,7 @@ Review.create(title: "bla bla", rating: 5, booking_id: 2, reviewee: "puppy")
 require 'faker'
 
 # 2.1 GENERATE USERS
-25.times {
+10.times {
 
   # 2.1.2 GENERATE NAMES AND SET TO VARIABLES
   first = Faker::Name.unique.first_name
@@ -44,11 +44,11 @@ require 'faker'
     birthdate: Faker::Date.birthday(min_age: 18, max_age: 65),
 
     # 2.1.6 SET ADDRESS
-    location: Faker::Address.full_address
+    location: "#{rand(1..20)} Villa Gaudelet, Paris"
   )
 }
 
-50.times {
+15.times {
   new_pup = Puppy.new(
     name: Faker::Name.unique.first_name,
     birthdate: Faker::Date.birthday(min_age: 2, max_age: 10),
