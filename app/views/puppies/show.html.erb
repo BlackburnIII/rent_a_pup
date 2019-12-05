@@ -3,7 +3,9 @@
 <%= link_to new_puppy_booking_path(@puppy) do %>
   <p>Book the puppy</p>
 <% end %>
-
+<%= link_to owner_path(@puppy) do %>
+  <p>view owner profile</p>
+<% end %>
 <div class="reviews-box">
   <h3><%= "Reviews of #{@puppy.name}" %></h3>
   <% @reviews.each do |review| %>

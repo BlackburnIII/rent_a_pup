@@ -22,4 +22,16 @@ class PagesController < ApplicationController
       )
     end
   end
+
+  def edit
+    @user = current_user
+  end
+
+  def update
+    @user = current_user
+    @user.update(params.require(:user).permit(:first_name, :last_name, :location, :birthdate))
+    redirect_to '/profile'
+  end
+
+
 end

@@ -1,0 +1,7 @@
+<%= simple_form_for current_user, url: update_profile_path, method: 'patch' do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :birthdate %>
+  <%= f.input :location %>
+  <%= f.button :submit %>
+<% end %>
