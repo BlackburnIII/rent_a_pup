@@ -15,9 +15,14 @@ gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
+
+# OUR NON-STANDARD GEMS HERE
 gem 'devise'
 gem 'webpacker'
 gem 'pundit'
+gem 'faker'
+gem 'cloudinary', '~>1.9.1'
+gem 'carrierwave', '~>1.2'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
