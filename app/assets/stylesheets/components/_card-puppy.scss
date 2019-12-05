@@ -1,5 +1,10 @@
+body {
+background-color: #1e1d1e;
+ }
+
+
 .box {
-  margin-top: 100px;
+  padding-top: 100px;
   margin-left: 40px;
   margin-right: 40px;
   display: flex;
@@ -65,8 +70,9 @@
 .card-puppy-infos {
   margin-top: 70px;
   margin-right: 20px;
-}
+
 
 a.btn-warning {
   font-size: 14px;
+}
 }

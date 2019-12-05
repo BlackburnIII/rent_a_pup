@@ -1,9 +1,12 @@
 .search-nav {
-  margin-top: 100px;
-  margin-bottom: 50px;
+  background: #1e1d1e;
+  position: sticky;
+  top: 58px;
+  margin-top: 58px;
   display: flex;
   justify-content: space-between;
-  padding: 0px 40px;
+  padding: 20px 40px 10px 40px;
+  z-index: 1000;
 }
 
   .search-nav h3 {
@@ -18,7 +21,13 @@
 
 }
 
+.fas {
+  color: white;
+  font-size: 22px;
+}
+
 .search-form-control .btn {
+  display: flex;
   position: absolute;
   top: 8px;
   bottom: 8px;
@@ -27,7 +36,7 @@
 }
 
 .search-form-control .form-control {
-  height: 3.5rem;
+  height: 3rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.02);
   border: 1px solid #E7E7E7;
 }
