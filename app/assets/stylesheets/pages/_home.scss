@@ -6,7 +6,6 @@ background-repeat:  no-repeat;
  background-size: cover;
  background-position: center;
  height: 100vh;
-
  }
 
  .about-logo i {
@@ -16,10 +15,10 @@ background-repeat:  no-repeat;
 
 .container-text {
   height: 100vh;
-  width: 900px;
+  width: 100%;
   text-align: center;
   padding-top: 300px;
-  padding-left: 200px;
+  padding-right: 32vw;
 }
 
  .banner h1 {
@@ -27,6 +26,7 @@ background-repeat:  no-repeat;
    color: white;
    font-size: 64px;
    line-height: 0.6;
+
  }
 
  .banner h3 {
@@ -42,10 +42,20 @@ background-repeat:  no-repeat;
   margin: 0px;
 }
 
+.btn-primary {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0px;
+}
+
 a.btn.btn-warning {
   padding: 12px 18px;
   color: white;
   margin-top: 40px;
+}
 
-
+a.btn.btn-primary {
+  padding: 12px 18px;
+  color: white;
+  margin-top: 40px;
 }

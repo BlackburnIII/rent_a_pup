@@ -1,11 +1,22 @@
+body {
+background-color: #1e1d1e;
+ }
+
+
 .box {
-  margin-top: 100px;
+  padding-top: 100px;
   margin-left: 40px;
   margin-right: 40px;
   display: flex;
   height: 100%;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+
+.infos {
+  width:100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-puppy{
@@ -40,8 +51,9 @@
 }
 
 .puppy-text {
+  position: relative;
   padding-left: 20px;
-  margin-top: 40px;
+  padding-top: 15px;
 }
 
 .card-puppy h2{
@@ -55,8 +67,12 @@
   padding: 8px 0px;
 }
 
+.card-puppy-infos {
+  margin-top: 70px;
+  margin-right: 20px;
+
+
 a.btn-warning {
-  margin: 0;
-  padding: 5px 5px;
-  margin-bottom: 40px;
+  font-size: 14px;
+}
 }

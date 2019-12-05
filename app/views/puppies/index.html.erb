@@ -1,11 +1,14 @@
 
-  <%= render '/components/navbar' %>
-  <%= render '/components/search-navbar' %>
+ <%= render '/components/navbar' %>
+ <%= render '/components/search-navbar' %>
 
+ <div class="background">
 <div class="box">
 <% @puppies.each do |puppy| %>
   <div class="card-puppy">
-    <%= cl_image_tag puppy.photo, height: 220, width: 220, crop: :thumb %>
+    <%= cl_image_tag puppy.photo %>
+    <div class="infos">
+
       <div class="puppy-text">
         <h3>Name</h3>
         <h2><%= puppy.name %></h2>
@@ -14,16 +17,19 @@
         <h3>Breed</h3>
         <h2><%= puppy.breed %></h2>
         <%= link_to(puppy) do %>
-
-        <div class="card-puppy-infos">
-        <%= link_to "More", puppy, class: 'btn btn-warning' %>
-        <% end %>
-
       </div>
+
+      <div class="card-puppy-infos">
+      <%= link_to "More", puppy, class: 'btn btn-warning' %>
+      <% end %>
     </div>
   </div>
+</div>
 <% end %>
 </div>
+
+</div>
+
 <div
   id="map"
   style="width: 100%;
