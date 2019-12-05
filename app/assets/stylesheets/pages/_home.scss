@@ -1,10 +1,16 @@
 // Specific CSS for your home-page
+body {
+  background-image: url("only background.jpg");
+  height: 100vh;
+  background-repeat:  no-repeat;
+  background-size: cover;
+  }
+
 .banner {
   background-image: url("Background Home Page.jpg");
   height: 100vh;
   background-repeat:  no-repeat;
   background-size: cover;
-
   }
 
   .about-logo {
@@ -37,7 +43,7 @@
 
   }
 
-  h1 {
+  .text-signup h1 {
   font-size: 36px;
   color: white;
   font-weight: medium;

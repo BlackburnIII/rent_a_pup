@@ -1,9 +1,16 @@
-<h1>Puppies#new</h1>
-<p>Find me in app/views/puppies/new.html.erb</p>
+<%= render '/components/navbar' %>
+<%= render '/components/search-navbar' %>
 
+<div class="container">
+  <div class="border-orange">
+
+<div class="form">
 <%= simple_form_for @puppy do |f| %>
   <%= f.input :name %>
   <%= f.input :birthdate %>
   <%= f.input :breed %>
-  <%= f.button :submit %>
+  <%= link_to "Create", puppies_path, class: 'btn btn-warning' %>
+</div>
 <% end %>
+</div>
+</div>

@@ -6,7 +6,6 @@
 
 <div class="reviews-box">
   <h3><%= "Reviews of #{@puppy.name}" %></h3>
-  <%= raise %>
   <% @reviews.each do |review| %>
     <% if review.size > 0 %>
       <div class="review-card">
