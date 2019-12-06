@@ -6,7 +6,7 @@ background-color: #1e1d1e;
 .box {
   padding-top: 100px;
   margin-left: 40px;
-  margin-right: 40px;
+  margin-right: 10px;
   display: flex;
   height: 100%;
   flex-flow: row wrap;
@@ -22,7 +22,7 @@ background-color: #1e1d1e;
 .card-puppy{
   overflow: hidden;
   height: 220px;
-  width: 700px;
+  width: 500px;
   margin-bottom: 40px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
