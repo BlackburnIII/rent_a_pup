@@ -1,4 +1,15 @@
+
+<%= render '/components/navbar' %>
+<%= render '/components/search-navbar' %>
+<div class="container">
+  <div class="border-orange">
+
+<div class="form">
+<h1>Bookings#new</h1>
+<p>Find me in app/views/bookings/new.html.erb</p>
+
 <h1>Book this puppy!</h1>
+
 <!-- SHOULD SEARCH FOR A CALENDAR VIEW
   TO PICK START AND END DATES -->
 
@@ -9,7 +20,8 @@
       <%= f.button :submit, "Go", class: "btn btn-primary" %>
     <% end %>
 
-</br>
+</div>
+</div>
+</div>
+<%= link_to 'Back', :back, class: "btn btn-warning" %>
 
-
-<%= link_to 'Back', :back %>
