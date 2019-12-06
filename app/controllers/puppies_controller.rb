@@ -1,6 +1,11 @@
 class PuppiesController < ApplicationController
   def index
-    @puppies = policy_scope(Puppy.all)
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR breed ILIKE :query"
+      @puppies = policy_scope(Puppy.where(sql_query, query: "%#{params[:query]}%"))
+    else
+      @puppies = policy_scope(Puppy.all)
+    end
     @markers = []
     @puppies.each do |puppy|
       if !puppy.user.location.nil?
@@ -16,6 +21,7 @@ class PuppiesController < ApplicationController
       lat: current_user.latitude,
       lng: current_user.longitude
     }
+    # raise
   end
 
   def show

@@ -34,6 +34,9 @@
     <% end %>
       <%= link_to 'Back', :back , class: "btn btn-primary small"%>
   </div>
+  <div class="container">
+  <div class="border-orange">
+
   <div>
     <h3>Your Bookings</h3>
       <% @bookings.each do |booking| %>
@@ -46,5 +49,6 @@
       <%= link_to "Add Your Puppy", new_puppy_path, class: "btn btn-primary small" %>
       <%= link_to 'Edit Profile', edit_profile_path, class: "btn btn-warning small"%>
     </div>
-
+   </div>
+      </div>
 </div>
