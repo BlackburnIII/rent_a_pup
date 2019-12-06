@@ -13,8 +13,12 @@
   font-size: 18px;
 }
 
+.nav-link {
+  transition: 1s;
+
+}
 .nav-link:hover {
- color:red !important;
+ color: #393e46 !important;
 }
 
 .navbar-light .navbar-nav .nav-link {
