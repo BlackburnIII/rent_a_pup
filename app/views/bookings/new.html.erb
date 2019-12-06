@@ -1,5 +1,4 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>Book this puppy!</h1>
 <!-- SHOULD SEARCH FOR A CALENDAR VIEW
   TO PICK START AND END DATES -->
 
@@ -9,5 +8,8 @@
       <%= f.input :end_date, as: :date, required: true, input_html: {class: "datepicker"} %>
       <%= f.button :submit, "Go", class: "btn btn-primary" %>
     <% end %>
+
+</br>
+
 
 <%= link_to 'Back', :back %>
