@@ -12,7 +12,11 @@ class ReviewsController < ApplicationController
     @review.reviewee = @reviewee
     authorize @review
     if @review.save
-      redirect_to puppy_booking_path(@puppy, @booking)
+      if @reviewee == "puppy"
+        redirect_to puppy_path(@puppy)
+      else
+        redirect_to owner_path(@puppy)
+      end
     else
       render "bookings/show"
     end

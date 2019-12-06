@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def profile
     @puppies = current_user.puppies
+    @bookings = Booking.where(user: current_user)
   end
 
   def owner

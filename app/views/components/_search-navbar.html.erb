@@ -1,5 +1,7 @@
 <div class="search-nav">
+<%= link_to puppies_path do %>
   <h3>See all puppies</h3>
+<% end %>
 
 <%= simple_form_for :search, url: root_path, method: :get do |f| %>
   <div class="search-form-control form-group">
