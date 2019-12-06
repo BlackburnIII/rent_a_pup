@@ -5,14 +5,14 @@
   <div class="border-orange">
 
 <div class="form">
-<%= simple_form_for @puppy do |f| %>
+<%= simple_form_for @puppy, method: :post do |f| %>
   <%= f.input :name %>
   <%= f.input :birthdate %>
   <%= f.input :breed %>
   <%= f.input :photo %>
-  <!--<%= # f.input :photo_cache as: :hidden %>-->
-  <%= link_to "Create", puppies_path, class: 'btn btn-warning' %>
-</div>
+  <!--<%#= f.input :photo_cache as: :hidden %>-->
+  <%= f.button :submit, class: "btn btn-warning" %>
 <% end %>
+</div>
 </div>
 </div>

@@ -2,8 +2,8 @@
 <%= render '/components/search-navbar' %>
 
 
-<div class="show-body-box">
   <h1><%= current_user.first_name %></h1>
+ <div class="background">
 
   <div>
     <% if @puppies.size > 0 %>
@@ -32,12 +32,19 @@
         </div>
       </div>
     <% end %>
+      <%= link_to 'Back', :back , class: "btn btn-primary small"%>
   </div>
-
   <div>
-    <%= link_to "Add Your Puppy", new_puppy_path, class: "btn btn-primary small" %>
-    <%= link_to 'Edit Profile', edit_profile_path, class: "btn btn-warning small"%>
+    <h3>Your Bookings</h3>
+      <% @bookings.each do |booking| %>
+        <%= link_to puppy_booking_path(booking.puppy, booking) do %>
+          <p><%= booking.puppy.name %></p>
+        <% end %>
+      <% end %>
   </div>
+    <div>
+      <%= link_to "Add Your Puppy", new_puppy_path, class: "btn btn-primary small" %>
+      <%= link_to 'Edit Profile', edit_profile_path, class: "btn btn-warning small"%>
+    </div>
 
-  <%= link_to 'Back', :back , class: "btn btn-primary small"%>
 </div>

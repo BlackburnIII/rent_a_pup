@@ -1,14 +1,36 @@
 <%= render '/components/navbar' %>
 <%= render '/components/search-navbar' %>
 
+ <div class="background">
+  <div>
+    <h1><%= @user.first_name %>, <%= @user.last_name %></h1>
+    <h3>All owned dogs:</h3>
+    <% @user.puppies.each do |puppy| %>
+      <% if @user.puppies.nil? == false %>
+          <div class="card-puppy">
+        <%= cl_image_tag puppy.photo %>
+        <div class="infos">
 
-<h1><%= @user.first_name %>, <%= @user.last_name %></h1>
-<h3>All owned dogs:</h3>
-<% @user.puppies.each do |puppy| %>
-  <% if @user.puppies.nil? == false %>
-    <p><%= puppy.name %></p>
-  <% end %>
-<% end %>
+          <div class="puppy-text">
+            <h3>Name</h3>
+            <h2><%= puppy.name %></h2>
+            <h3>Age</h3>
+            <h2><%= puppy.birthdate %></h2>
+            <h3>Breed</h3>
+            <h2><%= puppy.breed %></h2>
+            <%= link_to(puppy) do %>
+          </div>
+
+          <div class="card-puppy-infos">
+          <%= link_to "More", puppy, class: 'btn btn-warning' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+      <% end %>
+    <% end %>
+<%= link_to 'Back', :back %>
+  </div>
 <div class="reviews-box">
   <h3><%= "Reviews of #{@user.first_name}" %></h3>
   <% @reviews.each do |review| %>
@@ -21,4 +43,4 @@
     <% end %>
   <% end  %>
 </div>
-<%= link_to 'Back', :back %>
+</div>
