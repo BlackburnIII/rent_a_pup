@@ -1,18 +1,21 @@
 <%= render '/components/navbar' %>
-<%= render '/components/search-navbar' %>
 
-<div class="container">
-  <div class="border-orange">
+<div class="container-form-create">
+  <div class="photo-create-form">
+  </div>
+
+  <div class="content-form">
 
 <div class="form">
 <%= simple_form_for @puppy, method: :post do |f| %>
   <%= f.input :name %>
   <%= f.input :birthdate %>
   <%= f.input :breed %>
-  <%= f.input :photo %>
+  <%= f.input :photo , class: "file-field btn btn-info"%>
   <!--<%#= f.input :photo_cache as: :hidden %>-->
   <%= f.button :submit, class: "btn btn-warning" %>
 <% end %>
 </div>
 </div>
+
 </div>

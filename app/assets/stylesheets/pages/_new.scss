@@ -1,13 +1,11 @@
-.container {
-  margin-top: 150px;
+.container-form-create {
+  margin-top: 60px;
 }
 
-.border-orange {
-  border-style: solid;
-  border-color: $orange;
-  border-radius: 8px;
+.content-form {
+  padding-left: 50px;
   height: 450px;
-  width: 1000px;
+  width: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,4 +19,19 @@
 }
 
 
+input.btn.btn-warning {
+  margin-top: 20px;
+  color: white;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: medium;
+  font-size: 14px;
+}
+
+.photo-create-form {
+background-image: url("sharpey-background.jpg");
+background-repeat:  no-repeat;
+background-size: cover;
+background-position: center;
+height: 500px;
+ }
 
