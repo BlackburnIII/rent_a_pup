@@ -1,5 +1,4 @@
 <%= render '/components/navbar' %>
-
 <div class="container-form-create">
   <div class="photo-create-form">
   </div>
@@ -11,7 +10,7 @@
   <%= f.input :name %>
   <%= f.input :birthdate %>
   <%= f.input :breed %>
-  <%= f.input :photo , class: "file-field btn btn-info"%>
+  <%= f.input :photo %>
   <!--<%#= f.input :photo_cache as: :hidden %>-->
   <%= f.button :submit, class: "btn btn-warning" %>
 <% end %>
