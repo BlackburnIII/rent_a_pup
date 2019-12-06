@@ -1,8 +1,8 @@
-.container-form-edit {
-  margin-top: 60px;
+.container-form-booking-new {
+  margin-top: 58px;
 }
 
-.content-form-edit {
+.content-form-booking-new {
   padding-left: 50px;
   height: 450px;
   width: 700px;
@@ -12,26 +12,30 @@
 }
 
 
-.form-edit {
+.form-booking-new {
   width: 800px;
   height: auto;
   color: white;
 }
 
+.form h1 {
+  font-size: 26px;
+}
 
-.container-form-edit input.btn.btn-warning {
+.container-form-booking-new input.btn.btn-warning {
   margin-top: 20px;
   color: white;
   font-family: 'Roboto', 'sans-serif';
   font-weight: medium;
-  font-size: 14px;
+  font-size: 18px;
+  padding: 8px 28px;
 }
 
-.photo-edit-form {
-background-image: url("bassotto.jpg");
+.photo-booking-new-form {
+background-image: url("dog1.jpg");
 background-repeat:  no-repeat;
 background-size: cover;
 background-position: center;
-height: 500px;
+height: 600px;
  }
 

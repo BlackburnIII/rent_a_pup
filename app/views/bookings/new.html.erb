@@ -1,3 +1,12 @@
+<%= render '/components/navbar' %>
+
+<div class="container-form-booking-new">
+  <div class="photo-booking-new-form">
+  </div>
+
+  <div class="content-form-booking-new">
+
+    <div class="form-booking-new">
 <h1>Book this puppy!</h1>
 <!-- SHOULD SEARCH FOR A CALENDAR VIEW
   TO PICK START AND END DATES -->
@@ -6,10 +15,11 @@
     <%= simple_form_for([@puppy, @booking], method: "post") do |f| %>
       <%= f.input :start_date, as: :date, required: true, input_html: {class: "datepicker"} %>
       <%= f.input :end_date, as: :date, required: true, input_html: {class: "datepicker"} %>
-      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+      <%= f.button :submit, "Go", class: "btn btn-warning" %>
     <% end %>
 
 </br>
-
-
 <%= link_to 'Back', :back %>
+  </div>
+ </div>
+</div>
