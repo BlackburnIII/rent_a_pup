@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   def create
     @puppy = Puppy.find(params[:puppy_id])
     @booking = Booking.find(params[:booking_id])
-    if current_user.id == @booking.user_id
+    if current_user.id == @booking.puppy.user_id
       @reviewee = "user"
     else
       @reviewee = "puppy"
