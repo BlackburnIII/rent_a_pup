@@ -2,10 +2,11 @@
 <%= render '/components/navbar' %>
 <%= render '/components/search-navbar' %>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../assets/stylesheets/pages/puppy/show.scss">
 
 <div class="show-body-box">
   <div class="show-puppy-info">
-    <h1><%= @puppy.name %></h1>
+    <h1 style="color: white"><%= @puppy.name %></h1>
     <%= cl_image_tag @puppy.photo, width: 220, height: 220, crop: :thumb %>
     <div class="puppy-links">
       <%= link_to "Book #{@puppy.name}", new_puppy_booking_path(@puppy), class: "btn btn-warning small" %>
