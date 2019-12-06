@@ -1,3 +1,9 @@
+<%= render '/components/navbar' %>
+<%= render '/components/search-navbar' %>
+<div class="container">
+  <div class="border-orange">
+
+<div class="form">
 <h1>Bookings#new</h1>
 <p>Find me in app/views/bookings/new.html.erb</p>
 <!-- SHOULD SEARCH FOR A CALENDAR VIEW
@@ -10,4 +16,7 @@
       <%= f.button :submit, "Go", class: "btn btn-primary" %>
     <% end %>
 
-<%= link_to 'Back', :back %>
+</div>
+</div>
+</div>
+<%= link_to 'Back', :back, class: "btn btn-warning" %>

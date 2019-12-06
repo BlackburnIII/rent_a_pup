@@ -1,7 +1,13 @@
+<%= render '/components/navbar' %>
+<%= render '/components/search-navbar' %>
+
 <h1>booking of <%= @booking.puppy.name %></h1>
 <p>start date: <%= @booking.start_date %></p>
 <p>end date: <%= @booking.end_date %></p>
+<div class="container">
+  <div class="border-orange">
 
+<div class="form">
 <%= simple_form_for([@booking.puppy, @booking, @review], method: "post") do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
@@ -12,6 +18,9 @@
 <p> <%= link_to "Cancel booking", @booking,
       method: :delete,
       data: { confirm: "Are you sure?" } %></p>
-
-<p> <%= link_to 'Back', :back %></p>
 <p> <%= link_to "user profile", '/profile' %></p>
+
+</div>
+</div>
+</div>
+<p> <%= link_to 'Back', :back %></p>
