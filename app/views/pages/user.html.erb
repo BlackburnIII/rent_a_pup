@@ -2,14 +2,14 @@
 <%= render '/components/search-navbar' %>
 
 
-  <h1><%= current_user.first_name %></h1>
+  <h1><%= @user.first_name %></h1>
  <div class="background">
 
   <div>
     <% if @puppies.size > 0 %>
       <h3>Your Puppies</h3>
     <% else %>
-      <h3>You have no registered puppies</h3>
+      <h3>user has no registered puppies</h3>
     <% end %>
 
     <% @puppies.each do |puppy| %>
@@ -47,7 +47,7 @@
   </div>
    </div>
    <div>
-    <h3>Booking of my puppies</h3>
+    <h3>Your Bookings</h3>
       <% @yours.each do |booking| %>
         <%= link_to puppy_booking_path(booking.puppy, booking) do %>
           <p><%= booking.user.first_name %></p>
